@@ -94,7 +94,6 @@ section.background-secondary {
 .weight-700 {
   font-weight: 700 !important;
 }
-
 .text-gray {
   color: #555555;
 }
@@ -320,17 +319,14 @@ SIDEBAR + RIGHT COLUMN
 #sidebar {
   padding-top: 40px;
 }
-/*modified sidebar to follow scroll */
 .sidebar-content {
-    position: fixed;
-    width: inherit;
     z-index: 0;
-    padding: 0 0 0 0.2em;
+    padding: 0 1.7em 0 0em;
 }
 @media screen and (min-width: 992px) {
   .sidebar-content {
-    padding-left: 20px;
-    padding-right: 10px;
+    padding-left: 0px;
+    padding-right: 18px;
   }
 }
 .sidebar-heading {
@@ -351,7 +347,7 @@ SIDEBAR + RIGHT COLUMN
   text-decoration: none;
 }
 .sidebar-p {
-  color: #444;
+  color: #999999;
   font-size: 14px;
 }
 .sidebar-menu {
@@ -363,13 +359,13 @@ SIDEBAR + RIGHT COLUMN
   margin-bottom: 5px;
 }
 .sidebar-menu li a {
-  color: #aaa;
+  color: #555555;
 }
 .sidebar-menu li:before {
   font-family: 'FontAwesome';
   content: '\f105';
   margin: 0 5px 0 -15px;
-  color: #aaa;
+  color: #999999;
 }
 .sidebar-menu li.active a {
   color: #ef5285;
@@ -387,7 +383,6 @@ SIDEBAR + RIGHT COLUMN
 }
 .content-column {
   padding-top: 40px;
-  font-size: 14px;
 }
 .content-column.white-background {
   background: #fff;
@@ -398,22 +393,22 @@ SIDEBAR + RIGHT COLUMN
   overflow-y: hidden;
 }
 .content-column-content {
-  padding-left: 3px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-bottom: 20px;
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .content-column-content {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 .content-column-content p.lead {
-  color: #333;
+  color: #555555;
 }
 .content-column-content p,
 .content-column-content li {
-  color: #111;
+  color: #999999;
 }
 .content-column-content ul li {
   list-style-type: none;
@@ -1592,7 +1587,7 @@ body {
   font-size: 16px;
   line-height: 1.55;
   color: #000000;
-  background-color: #ffffff;
+  background-color: #f4f4f4;
 }
 a {
   color: #ef5285;
@@ -1960,30 +1955,30 @@ h6,
 }
 h1,
 .h1 {
-  font-size: 25px;
+  font-size: 48px;
 }
 h2,
 .h2 {
-  font-size: 21px;
+  font-size: 38px;
 }
 h3,
 .h3 {
-  font-size: 21px;
+  font-size: 32px;
   font-weight: 700;
 }
 h4,
 .h4 {
-  font-size: 15px;
+  font-size: 24px;
   font-weight: 700;
 }
 h5,
 .h5 {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
 }
 h6,
 .h6 {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
 }
 h1,
@@ -2008,7 +2003,7 @@ p {
   }
 }
 .text-small {
-  font-size: 13px;
+  font-size: 14px;
 }
 .text-large {
   font-size: 20px;
@@ -2116,11 +2111,4 @@ a.list-group-item.active > .badge,
 }
 .nav-pills > li > a > .badge {
   margin-left: 3px;
-}
-
-#extraattr {
-  color: #d0d0d0;
-}
-#custom-about-jpg {
-  text-align: left;
 }

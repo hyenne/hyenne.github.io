@@ -1,1 +1,20 @@
 /* your styles go here */
+#extraattr {
+    color: #d0d0d0;
+}
+#custom-about-jpg {
+    text-align: left;
+}
+@media (min-width: 992px) {
+    .sidebar-md {
+        width: 17%;
+    }
+    .work-md {
+        width: 80%;
+        padding-left: 90px;
+    }
+    .content-md {
+        width: 80%;
+        padding-left: 100px;
+    }
+}

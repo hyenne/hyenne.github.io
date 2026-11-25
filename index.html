@@ -1,12 +1,73 @@
+<!doctype html>
+<html lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.55.5" /> 
-    
-    
-    <meta http-equiv="refresh" content="0; URL=https://hyein.me/about/" />
-    
-    
-    
-    
-    
-    
-  </head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Hyein Lee, backend software engineer. Experience in Go, data systems, and payments, with selected HCI research from KAIST.">
+<title>Hyein Lee · Backend Engineer</title>
+<style>
+:root { color-scheme: light; --ink:#18232e; --muted:#485762; --accent:#235e76; --line:#d7e0e3; --paper:#fbfcfc; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--paper); color:var(--ink); font: 1rem/1.65 system-ui,sans-serif; }
+main { max-width:54rem; margin:auto; padding:clamp(2rem,8vw,5rem) clamp(1.25rem,5vw,3rem); }
+header { padding-bottom:2.5rem; border-bottom:1px solid var(--line); }
+h1,h2,h3,p { margin:0; }
+h1 { font-size:clamp(2.75rem,8vw,4.5rem); letter-spacing:-0.06em; line-height:1.1; }
+.tagline { margin-top:.6rem; color:var(--accent); font-size:1.15rem; font-weight:600; }
+.intro { max-width:40rem; margin-top:1.35rem; }
+nav { display:flex; flex-wrap:wrap; column-gap:1.25rem; row-gap:.35rem; margin-top:1.4rem; }
+a { color:var(--accent); text-underline-offset:.22em; }
+a:focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
+section { margin-top:3rem; scroll-margin-top:1rem; }
+h2 { font-size:1.6rem; letter-spacing:-.025em; margin-bottom:1.4rem; }
+article + article { margin-top:1.65rem; padding-top:1.5rem; border-top:1px solid var(--line); }
+.entry { display:flex; justify-content:space-between; column-gap:1rem; flex-wrap:wrap; align-items:baseline; }
+h3 { font-size:1.07rem; }
+.meta { color:var(--muted); font-size:.9rem; }
+article p + p { margin-top:.35rem; }
+.research-link { margin-top:1.45rem; }
+footer { margin-top:3rem; padding-top:1.35rem; border-top:1px solid var(--line); color:var(--muted); }
+@media print { body {background:white;} main {padding:0;} nav {display:none;} article {break-inside:avoid;} section {margin-top:1.5rem;} }
+</style>
+</head>
+<body>
+<main>
+<header>
+<h1>Hyein Lee</h1>
+<p class="tagline">Backend Engineer · Go, Data Systems &amp; Payments</p>
+<p class="intro">I build backend services and internal tools for financial reporting and game commerce. My work spans transaction processing, on-chain reconciliation, and card payment workflows. I studied human-computer interaction at KAIST.</p>
+<nav aria-label="Profile and page links">
+<a href="#experience">Experience</a>
+<a href="#research">HCI research</a>
+<a href="https://www.linkedin.com/in/hyeinlee601/">LinkedIn</a>
+<a href="https://github.com/hyenne">GitHub</a>
+</nav>
+</header>
+<section id="experience" aria-labelledby="experience-heading">
+<h2 id="experience-heading">Engineering experience</h2>
+<article><div class="entry"><h3>NEXPACE Limited</h3><p class="meta">Feb 2025–Present</p></div>
+<p class="meta">Software Engineer · Abu Dhabi</p>
+<p>Build and maintain Go services for transaction reporting and on-chain balance reconciliation, alongside a Django and Vue accounting application. Proposed and developed Snowflake pipelines for data migration, backfills, and balance checks. Extended indexing to Avalanche C-Chain.</p>
+<p>Expanded an existing game item store integration with cancellation and refund handling in Java and Spring Boot, automated tests, and back-office tools for payment operations. Developed and tested Solidity contracts for builder and creator fees.</p></article>
+<article><div class="entry"><h3>Nexon Universe</h3><p class="meta">Aug 2024–Jan 2025</p></div>
+<p class="meta">Software Engineer · South Korea</p>
+<p>Built a Go indexer for token transfers, internal transaction tracing, and balance tracking. Designed accounting schemas and gRPC APIs with the finance team and built the initial accounting back office.</p></article>
+<article><div class="entry"><h3>ShardLab</h3><p class="meta">Oct 2023–Aug 2024</p></div>
+<p>Developed account-abstraction wallets on zkSync for SEABW 2024 and built serverless transaction processing on AWS. Continued work on the affiliated DerbyStars project after moving to ShardLab.</p></article>
+<article><div class="entry"><h3>Hypedream</h3><p class="meta">Apr–Oct 2023</p></div>
+<p>Built Solidity marketplace contracts and RabbitMQ event processing for DerbyStars, and addressed external security audit findings.</p></article>
+</section>
+<section id="research" aria-labelledby="research-heading">
+<h2 id="research-heading">Selected HCI research</h2>
+<article><div class="entry"><h3><a href="https://make.kaist.ac.kr/project/2020-mascreen">MAScreen</a></h3><p class="meta">SIGGRAPH Asia Emerging Technologies · 2020</p></div>
+<p>A wearable display that makes mouth movements and speech cues visible through a mask. First author and demo presenter.</p></article>
+<article><div class="entry"><h3><a href="https://make.kaist.ac.kr/project/2020-schemaboard">SchemaBoard</a></h3><p class="meta">UIST · 2020</p></div>
+<p>A system that guides circuit assembly on a breadboard using visual feedback. Co-author.</p></article>
+<article><div class="entry"><h3><a href="https://make.kaist.ac.kr/project/2019-virtualcomponent">VirtualComponent</a></h3><p class="meta">CHI · 2019</p></div>
+<p>A mixed-reality tool for adjusting physical circuit components through a digital interface. Co-author.</p></article>
+<p class="research-link"><a href="https://thehil6014.wixsite.com/mysite">View my HCI research portfolio</a></p>
+</section>
+<footer>KAIST · M.S. in Industrial Design (HCI) · B.S. in Industrial Design</footer>
+</main>
+</body>
+</html>

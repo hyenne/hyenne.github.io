@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Hyein Lee, backend software engineer. Experience in Go, data systems, and payments, with selected HCI research from KAIST.">
+<meta name="description" content="Hyein Lee, backend engineer working on Go services, transaction data pipelines, and blockchain applications.">
 <title>Hyein Lee · Backend Engineer</title>
 <style>
 :root { color-scheme: light; --ink:#18232e; --muted:#485762; --accent:#235e76; --line:#d7e0e3; --paper:#fbfcfc; }
@@ -24,10 +24,15 @@ article + article { margin-top:1.65rem; padding-top:1.5rem; border-top:1px solid
 .entry { display:flex; justify-content:space-between; column-gap:1rem; flex-wrap:wrap; align-items:baseline; }
 h3 { font-size:1.07rem; }
 .meta { color:var(--muted); font-size:.9rem; }
-article p + p { margin-top:.35rem; }
+article p + p { margin-top:.6rem; }
+.entry-context { margin-top:.7rem; max-width:45rem; }
+article ul { margin:.85rem 0 0; padding-inline-start:1.4rem; list-style:disc outside; }
+article li + li { margin-top:.55rem; }
+article li::marker { color:var(--accent); }
+.education-list { margin:0; padding-inline-start:1.4rem; }
+#research { padding-top:2.5rem; border-top:1px solid var(--line); }
 .research-link { margin-top:1.45rem; }
-footer { margin-top:3rem; padding-top:1.35rem; border-top:1px solid var(--line); color:var(--muted); }
-@media print { body {background:white;} main {padding:0;} nav {display:none;} article {break-inside:avoid;} section {margin-top:1.5rem;} }
+@media print { body {background:white;} main {padding:0;} nav {display:none;} article {break-inside:auto;} h3 {break-after:avoid;} li {break-inside:avoid;} section {margin-top:1.5rem;} }
 </style>
 </head>
 <body>
@@ -35,27 +40,69 @@ footer { margin-top:3rem; padding-top:1.35rem; border-top:1px solid var(--line);
 <header>
 <h1>Hyein Lee</h1>
 <p class="tagline">Backend Engineer · Go, Data Systems &amp; Payments</p>
-<p class="intro">I build backend services and internal tools for financial reporting and game commerce. My work spans transaction processing, on-chain reconciliation, and card payment workflows. I studied human-computer interaction at KAIST.</p>
+<p class="intro">I build backend services, transaction data pipelines, and smart contracts. My recent work spans Go services for financial reporting, reconciliation tools for finance and audit teams, and payment workflows for a live game item store.</p>
 <nav aria-label="Profile and page links">
 <a href="#experience">Experience</a>
-<a href="#research">HCI research</a>
 <a href="https://www.linkedin.com/in/hyeinlee601/">LinkedIn</a>
 <a href="https://github.com/hyenne">GitHub</a>
 </nav>
 </header>
 <section id="experience" aria-labelledby="experience-heading">
 <h2 id="experience-heading">Engineering experience</h2>
-<article><div class="entry"><h3>NEXPACE Limited</h3><p class="meta">Feb 2025–Present</p></div>
-<p class="meta">Software Engineer · Abu Dhabi</p>
-<p>Build and maintain Go services for transaction reporting and on-chain balance reconciliation, alongside a Django and Vue accounting application. Proposed and developed Snowflake pipelines for data migration, backfills, and balance checks. Extended indexing to Avalanche C-Chain.</p>
-<p>Expanded an existing game item store integration with cancellation and refund handling in Java and Spring Boot, automated tests, and back-office tools for payment operations. Developed and tested Solidity contracts for builder and creator fees.</p></article>
-<article><div class="entry"><h3>Nexon Universe</h3><p class="meta">Aug 2024–Jan 2025</p></div>
-<p class="meta">Software Engineer · South Korea</p>
-<p>Built a Go indexer for token transfers, internal transaction tracing, and balance tracking. Designed accounting schemas and gRPC APIs with the finance team and built the initial accounting back office.</p></article>
-<article><div class="entry"><h3>ShardLab</h3><p class="meta">Oct 2023–Aug 2024</p></div>
-<p>Developed account-abstraction wallets on zkSync for SEABW 2024 and built serverless transaction processing on AWS. Continued work on the affiliated DerbyStars project after moving to ShardLab.</p></article>
-<article><div class="entry"><h3>Hypedream</h3><p class="meta">Apr–Oct 2023</p></div>
-<p>Built Solidity marketplace contracts and RabbitMQ event processing for DerbyStars, and addressed external security audit findings.</p></article>
+<article>
+<div class="entry"><h3>NEXPACE Limited</h3><p class="meta">Feb 2025 – Present</p></div>
+<p class="meta">Software Engineer · Abu Dhabi, UAE</p>
+<p class="entry-context">Continued building backend services for MapleStory Universe, the blockchain gaming ecosystem that includes MapleStory N. Expanded the accounting systems used for financial reporting, audit, and reconciliation.</p>
+<ul>
+<li>Build Go services backed by MySQL and gRPC to classify and aggregate blockchain transactions for financial reporting. Investigate discrepancies, coordinate historical corrections with infrastructure engineers, and verify corrected records against on-chain balances.</li>
+<li>Expanded the Django and Vue accounting back office with transaction search and management, change histories, revenue reports, and ledgers showing balances by wallet and asset.</li>
+<li>Proposed moving accounting workloads from MySQL to Snowflake and built pipelines with data integrity checks, retries, backfills, and automated daily balance reconciliation.</li>
+<li>Extended transaction indexing from the dedicated Avalanche subnet to Avalanche C-Chain and adapted reporting to aggregate activity by chain.</li>
+<li>Developed and tested Solidity contracts to track fees for individual game builders and creators and control who can claim them.</li>
+<li>Took over development of a live web store for in-game items. Extended card payment workflows with purchase cancellation and refund handling, built back-office tools for payment operations, and added automated tests.</li>
+</ul>
+</article>
+<article>
+<div class="entry"><h3>Nexon Universe</h3><p class="meta">Aug 2024 – Jan 2025</p></div>
+<p class="meta">Software Engineer · Pangyo, South Korea</p>
+<p class="entry-context">Built the initial transaction indexing and accounting tools for MapleStory Universe.</p>
+<ul>
+<li>Built a Go indexer for MapleStory Universe’s dedicated Avalanche subnet. Used batched RPC calls, internal transaction traces, and ABI decoding to track native asset, token, and NFT transfers, attribute gas fees, and record wallet balances before and after transfers.</li>
+<li>Designed accounting data models with the finance team and built gRPC APIs for managing accounts and classifying transfers.</li>
+<li>Built the initial Django and Vue accounting back office, including transaction search, filtering, and pagination.</li>
+<li>Maintained Kubernetes and Helm deployments and extended tooling for managing contract executor permissions across environments.</li>
+</ul>
+</article>
+<article>
+<div class="entry"><h3>ShardLab</h3><p class="meta">Oct 2023 – Aug 2024</p></div>
+<p class="meta">Software Engineer · Seoul, South Korea</p>
+<p class="entry-context">Developed account-abstraction wallets and transaction services at ShardLab, the innovation arm of Hashed. Continued developing DerbyStars alongside that work.</p>
+<ul>
+<li>Developed zkSync smart wallets for the SEABW 2024 event app and deferred wallet deployment until a user’s first transaction.</li>
+<li>Built serverless transaction processing with AWS Lambda, SNS, SQS, and DynamoDB. Added transaction status tracking and built login and wallet history pages.</li>
+<li>Built a DerbyStars smart contract that used Chainlink VRF to award randomized token rewards when players burned in-game items. Also developed a race results oracle and prototyped a Discord bot and ERC-4626 staking.</li>
+</ul>
+</article>
+<article>
+<div class="entry"><h3>Hypedream</h3><p class="meta">Apr 2023 – Oct 2023</p></div>
+<p class="meta">Blockchain Engineer · Seoul, South Korea</p>
+<p class="entry-context">Developed smart contracts and backend services for DerbyStars, a game on Polygon where players raise, race, and trade horses. The project was supported by Hashed and Web3 incubator Unopnd.</p>
+<ul>
+<li>Built Solidity marketplace contracts that enabled purchases with multiple payment tokens. Documented contract behavior for a third-party security audit and addressed the findings.</li>
+<li>Built a queue-based Polygon event pipeline that resumed from saved checkpoints after a restart. Added duplicate detection and consistency checks to identify missing events after chain reorganizations.</li>
+<li>Built an operations dashboard for blockchain events, errors, and API usage.</li>
+</ul>
+</article>
+</section>
+<section id="education" aria-labelledby="education-heading">
+<h2 id="education-heading">Education</h2>
+<article>
+<h3>KAIST</h3>
+<ul class="education-list">
+<li>M.S. in Industrial Design, Human–Computer Interaction · 2018–2020</li>
+<li>B.S. in Industrial Design, cum laude · 2013–2018</li>
+</ul>
+</article>
 </section>
 <section id="research" aria-labelledby="research-heading">
 <h2 id="research-heading">Selected HCI research</h2>
@@ -67,7 +114,6 @@ footer { margin-top:3rem; padding-top:1.35rem; border-top:1px solid var(--line);
 <p>A mixed-reality tool for adjusting physical circuit components through a digital interface. Co-author.</p></article>
 <p class="research-link"><a href="https://thehil6014.wixsite.com/mysite">View my HCI research portfolio</a></p>
 </section>
-<footer>KAIST · M.S. in Industrial Design (HCI) · B.S. in Industrial Design</footer>
 </main>
 </body>
 </html>

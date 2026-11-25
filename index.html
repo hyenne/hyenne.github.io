@@ -26,6 +26,9 @@ h3 { font-size:1.07rem; }
 .meta { color:var(--muted); font-size:.9rem; }
 article p + p { margin-top:.6rem; }
 .entry-context { margin-top:.7rem; max-width:45rem; }
+.project-highlight { margin:1.2rem 0; padding:.25rem 0 .25rem 1rem; border-inline-start:2px solid var(--accent); }
+.project-highlight h4 { margin:0 0 .35rem; font-size:1rem; }
+.project-highlight p { max-width:43rem; }
 article ul { margin:.85rem 0 0; padding-inline-start:1.4rem; list-style:disc outside; }
 article li + li { margin-top:.55rem; }
 article li::marker { color:var(--accent); }
@@ -39,8 +42,8 @@ article li::marker { color:var(--accent); }
 <main>
 <header>
 <h1>Hyein Lee</h1>
-<p class="tagline">Backend Engineer · Go, Data Systems &amp; Payments</p>
-<p class="intro">I build backend services, transaction data pipelines, and smart contracts. My recent work spans Go services for financial reporting, reconciliation tools for finance and audit teams, and payment workflows for a live game item store.</p>
+<p class="tagline">Backend Engineer · Go, Transaction Data &amp; Internal Tools</p>
+<p class="intro">I build Go services and transaction data pipelines for finance and operations teams. My work covers the path from capturing transactions to reconciling balances and verifying corrections when records disagree.</p>
 <nav aria-label="Profile and page links">
 <a href="#experience">Experience</a>
 <a href="https://www.linkedin.com/in/hyeinlee601/">LinkedIn</a>
@@ -53,8 +56,12 @@ article li::marker { color:var(--accent); }
 <div class="entry"><h3>NEXPACE Limited</h3><p class="meta">Feb 2025 – Present</p></div>
 <p class="meta">Software Engineer · Abu Dhabi, UAE</p>
 <p class="entry-context">Continued building backend services for MapleStory Universe, the blockchain gaming ecosystem that includes MapleStory N. Expanded the accounting systems used for financial reporting, audit, and reconciliation.</p>
+<div class="project-highlight">
+<h4>From on-chain events to auditable financial records</h4>
+<p>When transaction classification rules changed, historical records had to be reprocessed for financial reporting. I traced the affected records through the Go pipeline and worked with infrastructure engineers to plan the correction and rerun the affected aggregations. I checked the rebuilt records against on-chain balances. Later, I built backfill jobs and automated daily balance checks into the Snowflake pipeline.</p>
+</div>
 <ul>
-<li>Build Go services backed by MySQL and gRPC to classify and aggregate blockchain transactions for financial reporting. Investigate discrepancies, coordinate historical corrections with infrastructure engineers, and verify corrected records against on-chain balances.</li>
+<li>Build Go services backed by MySQL and gRPC to classify and aggregate blockchain transactions for financial reporting.</li>
 <li>Expanded the Django and Vue accounting back office with transaction search and management, change histories, revenue reports, and ledgers showing balances by wallet and asset.</li>
 <li>Proposed moving accounting workloads from MySQL to Snowflake and built pipelines with data integrity checks, retries, backfills, and automated daily balance reconciliation.</li>
 <li>Extended transaction indexing from the dedicated Avalanche subnet to Avalanche C-Chain and adapted reporting to aggregate activity by chain.</li>
